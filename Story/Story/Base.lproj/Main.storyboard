@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UKG-4w-LT6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ife-1N-GCX">
+            <objects>
+                <navigationController id="UKG-4w-LT6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iht-TC-WqD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="j8s-Xz-rYF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IG-Fz-PV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="314"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UO1-g0-ebY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3N-Es-tOl">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2ad-Xs-Uj5"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Previous" id="Du5-yk-kKZ">
+                                        <connections>
+                                            <action selector="previousPressed:" destination="vXZ-lx-hvc" id="TZl-u1-0KV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0nL-KM-5s3"/>
+                                    <barButtonItem title="Random" id="uNP-C2-3JP">
+                                        <connections>
+                                            <action selector="randomPressed:" destination="vXZ-lx-hvc" id="kKx-6B-Jah"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zex-yB-wtO"/>
+                                    <barButtonItem title="Next" id="D4j-vt-zVz">
+                                        <connections>
+                                            <action selector="nextPressed:" destination="vXZ-lx-hvc" id="oVc-3x-MRn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UO1-g0-ebY" secondAttribute="trailing" id="2PM-bz-moI"/>
+                            <constraint firstItem="UO1-g0-ebY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3bf-7y-rKq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W3N-Es-tOl" secondAttribute="trailing" constant="-20" id="3dY-dW-OCd"/>
+                            <constraint firstItem="W3N-Es-tOl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="5a7-b1-PcC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UO1-g0-ebY" secondAttribute="trailing" id="97I-qW-TNi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UO1-g0-ebY" secondAttribute="bottom" constant="44" id="D8y-6N-1mH"/>
+                            <constraint firstItem="UO1-g0-ebY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Odg-L2-KKl"/>
+                            <constraint firstItem="UO1-g0-ebY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PbP-xm-AaS"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UO1-g0-ebY" secondAttribute="bottom" id="ayA-lg-s7y"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="W3N-Es-tOl" secondAttribute="bottom" id="ch7-hb-PhA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UO1-g0-ebY" secondAttribute="bottom" constant="44" id="qEl-Jd-yjs"/>
+                            <constraint firstItem="UO1-g0-ebY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="yNm-EE-iO9"/>
+                            <constraint firstItem="W3N-Es-tOl" firstAttribute="top" secondItem="UO1-g0-ebY" secondAttribute="bottom" id="zl4-Lf-KIv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="97I-qW-TNi"/>
+                                <exclude reference="PbP-xm-AaS"/>
+                                <exclude reference="yNm-EE-iO9"/>
+                                <exclude reference="ayA-lg-s7y"/>
+                                <exclude reference="qEl-Jd-yjs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="9iP-eU-rRV"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="storyImageView" destination="UO1-g0-ebY" id="Bjc-OL-fZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="314"/>
+        </scene>
+    </scenes>
+</document>
